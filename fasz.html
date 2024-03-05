@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>JavaScript</title>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+          <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="text-center container">
+          <h1>Víz halmazállapota</h1>
+          <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Víz hőmérséklete</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1">
+                    <button class="btn btn-primary" onclick="calculate()">Küldés</button>
+                    <p class="fok"></p>
+                    <p class="halmaz">Halmazállapota: </p>
+          </div>
+
+          <div class="mb-3 bg-danger w-100">
+                    <h1>Diák nyilvántartó</h1>
+                    <hr>
+                    <button class="btn btn-info" type="button" data-bs-toggle="modal" data-bs-target="#modal2">Új diák
+                              felvétele</button>
+                    <button class="btn btn-secondary new-grade" type="button" data-bs-toggle="modal"
+                              data-bs-target="#modal3">Új jegy felvétele</button>
+                    <div class="modal fade" id="modal2" tabindex="-1">
+                              <div class="modal-dialog">
+                                        <div class="modal-content">
+                                                  <div class="modal-header">
+                                                            <h5 class="modal-title">Modal title</h5>
+                                                            <button type="button" class="btn-close"
+                                                                      data-bs-dismiss="modal"
+                                                                      aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                            <label for="exampleFormControlInput1"
+                                                                      class="form-label">Diák neve:</label>
+                                                            <input type="text" class="form-control new-student"
+                                                                      id="exampleFormControlInput2">
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                      data-bs-dismiss="modal">Close</button>
+                                                            <button onclick="new_student()" data-bs-dismiss="modal"
+                                                                      type="button" class="btn btn-primary">Save
+                                                                      changes</button>
+                                                  </div>
+                                        </div>
+                              </div>
+                    </div>
+                    <div class="modal" id="modal3" tabindex="-1">
+                              <div class="modal-dialog">
+                                        <div class="modal-content">
+                                                  <div class="modal-header">
+                                                            <h5 class="modal-title">Modal title</h5>
+                                                            <button type="button" class="btn-close"
+                                                                      data-bs-dismiss="modal"
+                                                                      aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                            <label for="exampleFormControlInput1"
+                                                                      class="form-label">Diák neve:</label>
+                                                            <input type="number" class="form-control new-grades"
+                                                                      id=" exampleFormControlInput3">
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary "
+                                                                      data-bs-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary"
+                                                                      data-bs-dismiss="modal" onclick="fasz()">Save
+                                                                      changes</button>
+                                                  </div>
+                                        </div>
+                              </div>
+                    </div>
+                    <table class="table">
+                              <thead>
+                                        <tr>
+                                                  <th><strong>Diák neve</strong></th>
+                                                  <th><strong>Jegyei</strong></th>
+                                        </tr>
+                              </thead>
+                              <hr>
+                              <tbody>
+                                        <tr>
+                                                  <td class="name"></td>
+                                                  <td class="table-grades"></td>
+                                        </tr>
+                              </tbody>
+                    </table>
+                    <p><strong>Jegyek száma:</strong> <span class="count-grades"></span></p>
+                    <p><strong>Legjobb jegy:</strong><span class="highest-grade"></span></p>
+                    <p><strong>Legrosszabb jegy:</strong><span class="worst-grade"></span></p>
+                    <p><strong>Átlag:</strong><span class="average"></span></p>
+          </div>
+          <div class="text-start">
+                    <h1>Osztálynévsor</h1>
+                    <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                              <label class="form-check-label" for="flexRadioDefault1">
+                                        Manuális megadás
+                              </label>
+                    </div>
+                    <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                              <label class="form-check-label" for="flexRadioDefault2">
+                                        Előre megadott
+                              </label>
+                    </div>
+                    <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                              <label class="form-check-label" for="flexRadioDefault2">
+                                        Random
+                              </label>
+                    </div>
+          </div>
+          <div>
+                    <h1>Tömb gyakorló feladatok</h1>
+
+          </div>
+          <div class="bg-warning">
+                    <h1>Flying Duck Travels e-mail cím generátor</h1>
+                    <div class="container text-start ">
+                              <div class="mb-3">
+                                        <label for="formGroupExampleInput" class="form-label">Teljes név:</label>
+                                        <input type="text" class="form-control full-name" id="formGroupExampleInput"
+                                                  placeholder="Kis Anna">
+                              </div>
+                              <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Születési dátum:</label>
+                                        <input type="date" class="form-control szdatum" id="formGroupExampleInput2"
+                                                  placeholder="Another input placeholder">
+                                       
+                              </div>
+                              <button class="btn btn-primary my-3" onclick="generalas()">Generálás</button>
+                              <div class="mb-3">
+                                        <label for="formGroupExampleInput2" class="form-label">Generált e-mail cím:</label>
+                                        <input type="text" class="form-control email" disabled id="formGroupExampleInput3"
+                                                  placeholder="address@duck.com">
+                              </div>
+                    </div>
+          </div>
+          <div class="bg-dark">
+                    <form>
+                              <h1>Mondatgenerátor</h1>
+                              <div class="mb-3">
+                                  <label class="form-label">A hónap, amikor születtél:</label>
+                                  <select class="honap form-select">
+                                      <option selected>Válassz!</option>
+                                      <option value="0">Január</option>
+                                      <option value="1">Február</option>
+                                      <option value="2">Március</option>
+                                      <option value="3">Április</option>
+                                      <option value="4">Május</option>
+                                      <option value="5">Június</option>
+                                      <option value="6">Július</option>
+                                      <option value="7">Augusztus</option>
+                                      <option value="8">Szeptember</option>
+                                      <option value="9">Október</option>
+                                      <option value="10">November</option>
+                                      <option value="11">December</option>
+                                  </select>
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label">A nap, amikor születtél:</label>
+                                  <input type="number" class="nap form-control" min="1" max="31" novalidate>
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label">Milyen színű felső van rajtad?</label>
+                                  <select class="felso form-select">
+                                      <option selected>Válassz!</option>
+                                      <option value="0">fehér</option>
+                                      <option value="1">fekete</option>
+                                      <option value="2">rózsaszín</option>
+                                      <option value="3">vörös</option>
+                                      <option value="4">kék</option>
+                                      <option value="5">sárga</option>
+                                      <option value="6">szürke</option>
+                                      <option value="7">zöld</option>
+                                      <option value="8">narancs</option>
+                                      <option value="9">barna</option>
+                                      <option value="10">egyéb</option>
+                                  </select>
+                              </div>
+                              <div class="mb-3">
+                                  <button type="button" class="btn btn-success" onclick="general()">Mondat generálása</button>
+                              </div>
+                              <p class="generaltMondat text-light"></p>
+                          </form>
+          </div>
+
+          <script src="js/bootstrap.min.js"></script>
+          <script src="js/javascript.js"></script>
+
+</body>
+
+</html>
