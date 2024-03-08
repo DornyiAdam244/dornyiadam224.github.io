@@ -1,203 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>JavaScript</title>
-          <link rel="stylesheet" href="css/bootstrap.min.css">
-          <link rel="stylesheet" href="css/custom.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madáretető projekt</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ybf.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
 </head>
 
-<body class="text-center container">
-          <h1>Víz halmazállapota</h1>
+<body>
+  <div class="container-fluid" id="top">
+    <header class="sticky-top">
+      <section class="d-flex help">
+        <p class="text-center ms-5 me-5 bi">Tegyünk <span class="broken-small-res-display-none big">együtt</span> a
+          természetért! <i class="bi  bi-heart-fill broken-small-res-display-none"></i> </p>
+
+        <a href="" class="text-dark">
+          <i class="bi">Elakadtál? Segítünk! </i>
+          <i class="bi">titkarsag@bankitatabanya.hu</i>
+          <i class="bi bi-envelope broken-small-res-display-none"></i>
+        </a>
+      </section>
+      <nav class="navbar navbar-dark navbar-expand-xxl bg-dark uppercase">
+        <div class="container-fluid">
+          <a class="navbar-brand me-auto disappear-logo" href="index.html"><img src="images/logo.png" alt=""
+              class="logo"></a>
+          <div class="position-relative mobile-cart ms-3">
+            <a href="checkout.html"><i class="bi bi-cart3 end-0"></i></a>
+            <span class="position-absolute badge rounded-pill bg-danger end-50 cart-badge">
+              <span id="cartItemCount visually-hidden" class="mobile-cart-items"></span>
+            </span>
+          </div>
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <div class="offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h4 class="offcanvas-title text-white" id="offcanvasDarkNavbarLabel">Menü</h4>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Főoldal </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="yourbirdfeeder.html">A te madáretetőd</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  " aria-current="page" href="ourbirds.html">Madaraink</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="galery.html">Galéria </a>
+                </li>
+                <li class="nav-item disappear-basket">
+                  <div class="position-relative">
+                    <a href="checkout.html"><i class="bi bi-cart3"></i></a>
+                    <span class="position-absolute badge rounded-pill bg-danger end-50 cart-badge">
+                      <span class="cartItemCount"></span>
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="slider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/slider2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption container">
+              <h1 class="blue">Madáretető projekt</h1>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/slider3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption container">
+              <h1> Madáretető projekt</h1>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/slider.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption container">
+              <h1>Madáretető projekt</h1>
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        </div>
+      </div>
+      <section class="row container-fluid">
+        <h2 class="text-center">Hogyan indult el? Miért pont madáretető?</h2>
+        <article class="col-lg-12 video container-fluid">
+          <iframe width="80%" height="500" src="https://www.youtube.com/embed/mDOeHMHpHR8?si=pDW2U4c3-o1h7dKE"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <h3>Az alábbi kis videóban elmagyarázzuk a kezdeteket!</h3>
+        </article>
+      </section>
+      <section class="row build-your-birdfeeder">
+        <h2 class="text-center">Készíts <span class="uppercase">te</span> is madáretetőt!</h2>
+        <article class="col-lg-12 p-0">
+          <img src="images/building_bird_feeder.png" alt="Madáretető model" class="building_feeder">
+          <div class="text-center">
+            <h3>Hogy ez miért is jó?</h3>
+            <img src="images/gratefulbird.png" class="d-block ms-auto me-auto crop_picture" alt="">
+            <p class="disappear-mobile">
+              Az etetési időszak Magyarországon az első fagyoktól ezek tartós megszűnéséig tart. Ha viszont új
+              helyen szeretnénk elindítani a madáretetést, akkor már az ősz beköszöntével elkezdhetjük. Fontos,
+              hogy ha elkezdjük az etetést, akkor <span class="uppercase">nem</span> szabad abbahagyni, mert a
+              könnyű táplálék forrás megvonása
+              hidegebb éjszakákon a madarak pusztulásához vezet! A kistestű, gyakran alig 10 gramm súlyú madarak
+              számára -10°C alatt a <span>túlélését</span> jelentheti egy kis étel, ugyanis tartalékaik csak az éjszaka
+              átvészelésére elegendőek. Ha másnap nem tudnak eleget táplálkozni az alig <span>5-6</span> órányi nappali
+              periódusban, könnyen elpusztulhatnak a következő hideg éjszakán.
+            </p>
+
+            <button type="button" class="btn btn-primary disappear-fullscreen" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              Katt!
+            </button>
+            <div class="modal fade modal-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">A madáretetők jótékony hatása</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Az etetési időszak Magyarországon az első fagyoktól ezek tartós megszűnéséig tart. Ha viszont új
+                    helyen szeretnénk elindítani a madáretetést, akkor már az ősz beköszöntével elkezdhetjük. Fontos,
+                    hogy ha elkezdjük az etetést, akkor <span class="uppercase">nem</span> szabad abbahagyni, mert a
+                    könnyű táplálék forrás megvonása
+                    hidegebb éjszakákon a madarak pusztulásához vezet! A kistestű, gyakran alig 10 gramm súlyú madarak
+                    számára -10°C alatt a <span>túlélését</span> jelentheti egy kis étel, ugyanis tartalékaik csak az
+                    éjszaka
+                    átvészelésére elegendőek. Ha másnap nem tudnak eleget táplálkozni az alig <span>5-6</span> órányi
+                    nappali
+                    periódusban, könnyen elpusztulhatnak a következő hideg éjszakán.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <section class="place_holder"></section>
+      </section>
+      <section class="row container-fluid">
+        <h2 class="text-center mt-5 container-fluid">Így készült a <span class="uppercase">MI</span> madáretetőnk</h2>
+        <article class="col-lg-12 video py-5 container-fluid mt-4">
+          <iframe width="80%" height="500" src="https://www.youtube.com/embed/EF0nuiz-YYs?si=1qx8u63NOeDsPAlP"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </article>
+      </section>
+      <section class="feeder_pictures my-5">
+        <h2 class="text-center mb-5">A madáretetőnkbe betértek</h2>
+        <h3 class="text-center ">Kis érdekesség róluk</h3>
+        <div class="d-flex">
+          <article>
+            <figure class="figure">
+              <img src="images/fecske2.jpg" alt="Fecske kép">
+              <figcaption>
+                <h3>Füsti fecske</h3><br>A füsti fecske a fecskefélék villásfecskék nemének legelterjedtebb faja.
+                Jellegzetes külsejű énekesmadár, testének felső részén kékesfekete tollazattal, villás farktollakkal és
+                ívelt, hegyes szárnyakkal.<br>Táplálkozása: repülő rovarok, levéltetvek, <br> pókok, hernyók
+              </figcaption>
+            </figure>
+          </article>
+          <article>
+            <figure class="figure">
+              <img src="images/cinege.jpg" alt="Cinege kép">
+              <figcaption>
+                <h3>Kék cinege</h3><br>
+                A kék cinege, sokszor becézően kékcinke a verébalakúak rendjébe, ezen belül a cinegefélék családjába
+                tartozó apró termetű, közismert és közkedvelt madárfaj, az európai régió egyetlen sárga-kék
+                cinegefaja.<br>Táplálkozása: lepkehernyók, pókok, poloskalárvák, lószúnyogok
+              </figcaption>
+            </figure>
+          </article>
+          <article>
+            <figure class="figure">
+              <img src="images/rigo.jpg" alt="Fekete rigó kép">
+              <figcaption>
+                <h3>Fekete rigó</h3><br>A fekete rigó a madarak osztályának verébalakúak rendjébe és a rigófélék
+                családjába tartozó faj.Az eurázsiai fekete rigó néven is szokták emlegetni, itthon egyszerűen fekete
+                rigónak.<br> Táplálkozása: pattanóbogarak, giliszták, gyümölcsök,
+                magvak
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+      <section class="container">
+        <form class="row g-3 needs-validation" novalidate>
+          <h2 class="text-center">Szoktál segíteni a természetnek?</h2>
+          <h3 class="text-center">Szeretnénk egy térképet kiépíteni arról, hogy nagyjából hol etetik a madarakat. Arra
+            kérünk, hogy segíts azzal, hogy megadod az adataidat és a madáretetőd helyét!</h3>
           <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Víz hőmérséklete</label>
-                    <input type="number" class="form-control" id="exampleFormControlInput1">
-                    <button class="btn btn-primary" onclick="calculate()">Küldés</button>
-                    <p class="fok"></p>
-                    <p class="halmaz">Halmazállapota: </p>
+            <label for="exampleFormControlInput1" class="form-label">Email cím</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="teemailcimed@gmail.com"
+              required>
+            <div class="invalid-feedback">Helytelen email cím. Helyes: gipsz.jakab@gmail.com</div>
           </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Polgári név</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Gipsz Jakab" required>
+            <div class="invalid-feedback">Helytelen név. Helyes: Gipsz Jakab</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label">Madáretető címe</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Város,irányítószám, utca"
+              required>
+            <div class="invalid-feedback">Helytelen cím. Helyes: Tatabánya,2800,Réti utca 1-5</div>
+          </div>
+          <div class="check">
+            <div class="form-check ms-1">
+              <input type="radio" class="form-check-input my-0" id="validationFormCheck2" name="radio-stacked" required>
+              <label class="form-check-label" for="validationFormCheck2">Az adataim nem felhasználhatóak</label>
+            </div>
+            <div class="form-check mb-3 ms-1">
+              <input type="radio" class="form-check-input my-0" id="validationFormCheck3" name="radio-stacked" required>
+              <label class="form-check-label" for="validationFormCheck3">Az adataim felhasználhatóak</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-danger" type="submit" onclick="validateForm()">Küldés</button>
+          </div>
+        </form>
+        </article>
+      </section>
+      <section class="container-fluid sticky-bottom text-end up mb-3">
+        <a href="#top">
+          <button class="btn btn-dark ms-auto border border-success rounded-pill me-2"><i class="bi bi-chevron-up"></i>
+          </button></a>
+      </section>
 
-          <div class="mb-3 bg-danger w-100">
-                    <h1>Diák nyilvántartó</h1>
-                    <hr>
-                    <button class="btn btn-info" type="button" data-bs-toggle="modal" data-bs-target="#modal2">Új diák
-                              felvétele</button>
-                    <button class="btn btn-secondary new-grade" type="button" data-bs-toggle="modal"
-                              data-bs-target="#modal3">Új jegy felvétele</button>
-                    <div class="modal fade" id="modal2" tabindex="-1">
-                              <div class="modal-dialog">
-                                        <div class="modal-content">
-                                                  <div class="modal-header">
-                                                            <h5 class="modal-title">Modal title</h5>
-                                                            <button type="button" class="btn-close"
-                                                                      data-bs-dismiss="modal"
-                                                                      aria-label="Close"></button>
-                                                  </div>
-                                                  <div class="modal-body">
-                                                            <label for="exampleFormControlInput1"
-                                                                      class="form-label">Diák neve:</label>
-                                                            <input type="text" class="form-control new-student"
-                                                                      id="exampleFormControlInput2">
-                                                  </div>
-                                                  <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                      data-bs-dismiss="modal">Close</button>
-                                                            <button onclick="new_student()" data-bs-dismiss="modal"
-                                                                      type="button" class="btn btn-primary">Save
-                                                                      changes</button>
-                                                  </div>
-                                        </div>
-                              </div>
-                    </div>
-                    <div class="modal" id="modal3" tabindex="-1">
-                              <div class="modal-dialog">
-                                        <div class="modal-content">
-                                                  <div class="modal-header">
-                                                            <h5 class="modal-title">Modal title</h5>
-                                                            <button type="button" class="btn-close"
-                                                                      data-bs-dismiss="modal"
-                                                                      aria-label="Close"></button>
-                                                  </div>
-                                                  <div class="modal-body">
-                                                            <label for="exampleFormControlInput1"
-                                                                      class="form-label">Diák neve:</label>
-                                                            <input type="number" class="form-control new-grades"
-                                                                      id=" exampleFormControlInput3">
-                                                  </div>
-                                                  <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary "
-                                                                      data-bs-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary"
-                                                                      data-bs-dismiss="modal" onclick="fasz()">Save
-                                                                      changes</button>
-                                                  </div>
-                                        </div>
-                              </div>
-                    </div>
-                    <table class="table">
-                              <thead>
-                                        <tr>
-                                                  <th><strong>Diák neve</strong></th>
-                                                  <th><strong>Jegyei</strong></th>
-                                        </tr>
-                              </thead>
-                              <hr>
-                              <tbody>
-                                        <tr>
-                                                  <td class="name"></td>
-                                                  <td class="table-grades"></td>
-                                        </tr>
-                              </tbody>
-                    </table>
-                    <p><strong>Jegyek száma:</strong> <span class="count-grades"></span></p>
-                    <p><strong>Legjobb jegy:</strong><span class="highest-grade"></span></p>
-                    <p><strong>Legrosszabb jegy:</strong><span class="worst-grade"></span></p>
-                    <p><strong>Átlag:</strong><span class="average"></span></p>
-          </div>
-          <div class="text-start">
-                    <h1>Osztálynévsor</h1>
-                    <div class="form-check">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
-                              <label class="form-check-label" for="flexRadioDefault1">
-                                        Manuális megadás
-                              </label>
-                    </div>
-                    <div class="form-check">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault2">
-                              <label class="form-check-label" for="flexRadioDefault2">
-                                        Előre megadott
-                              </label>
-                    </div>
-                    <div class="form-check">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault3">
-                              <label class="form-check-label" for="flexRadioDefault2">
-                                        Random
-                              </label>
-                    </div>
-          </div>
-          <div>
-                    <h1>Tömb gyakorló feladatok</h1>
 
-          </div>
-          <div class="bg-warning">
-                    <h1>Flying Duck Travels e-mail cím generátor</h1>
-                    <div class="container text-start ">
-                              <div class="mb-3">
-                                        <label for="formGroupExampleInput" class="form-label">Teljes név:</label>
-                                        <input type="text" class="form-control full-name" id="formGroupExampleInput"
-                                                  placeholder="Kis Anna">
-                              </div>
-                              <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Születési dátum:</label>
-                                        <input type="date" class="form-control szdatum" id="formGroupExampleInput2"
-                                                  placeholder="Another input placeholder">
-                                       
-                              </div>
-                              <button class="btn btn-primary my-3" onclick="generalas()">Generálás</button>
-                              <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Generált e-mail cím:</label>
-                                        <input type="text" class="form-control email" disabled id="formGroupExampleInput3"
-                                                  placeholder="address@duck.com">
-                              </div>
-                    </div>
-          </div>
-          <div class="bg-dark text-light">
-                    <form>
-                              <h1>Mondatgenerátor</h1>
-                              <div class="mb-3">
-                                  <label class="form-label">A hónap, amikor születtél:</label>
-                                  <select class="honap form-select">
-                                      <option selected>Válassz!</option>
-                                      <option value="0">Január</option>
-                                      <option value="1">Február</option>
-                                      <option value="2">Március</option>
-                                      <option value="3">Április</option>
-                                      <option value="4">Május</option>
-                                      <option value="5">Június</option>
-                                      <option value="6">Július</option>
-                                      <option value="7">Augusztus</option>
-                                      <option value="8">Szeptember</option>
-                                      <option value="9">Október</option>
-                                      <option value="10">November</option>
-                                      <option value="11">December</option>
-                                  </select>
-                              </div>
-                              <div class="mb-3">
-                                  <label class="form-label">A nap, amikor születtél:</label>
-                                  <input type="number" class="nap form-control" min="1" max="31" novalidate>
-                              </div>
-                              <div class="mb-3">
-                                  <label class="form-label">Milyen színű felső van rajtad?</label>
-                                  <select class="felso form-select">
-                                      <option selected>Válassz!</option>
-                                      <option value="0">fehér</option>
-                                      <option value="1">fekete</option>
-                                      <option value="2">rózsaszín</option>
-                                      <option value="3">vörös</option>
-                                      <option value="4">kék</option>
-                                      <option value="5">sárga</option>
-                                      <option value="6">szürke</option>
-                                      <option value="7">zöld</option>
-                                      <option value="8">narancs</option>
-                                      <option value="9">barna</option>
-                                      <option value="10">egyéb</option>
-                                  </select>
-                              </div>
-                              <div class="mb-3">
-                                  <button type="button" class="btn btn-success mb-3" onclick="general()">Mondat generálása</button>
-                              </div>
-                              <p class="generaltMondat mb-3 text-light"></p>
-                          </form>
-          </div>
 
-          <script src="js/bootstrap.min.js"></script>
-          <script src="js/javascript.js"></script>
+    </main>
+    <footer class="row contact-info">
+      <section class="col-lg-4">
+        <h3>Információk</h3>
+        <p><i class="bi bi-house"></i>Tatabánya, Réti utca 1-5.</i></p>
+        <p><i class="bi bi-globe"></i>Magyarország</p>
+        <p><i class="bi bi-telephone"></i>+36 1234 5678</p>
+        <p><i class="bi bi-mailbox"></i>titkarsag.bankitatabanya.hu</p>
+        <article class="d-flex">
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+        </article>
+      </section>
+      <section class="col-lg-4">
+        <h3>Vásárlói fiók</h3>
+        <p><i class="bi bi-person-up"></i>Belépés</p>
+        <p><i class="bi bi-person-down"></i>Regisztráció </p>
+        <p><i class="bi bi-person"></i>Profilom </p>
+        <p><i class="bi bi-bag-check"></i>Kosár</p>
+        <p><i class="bi bi-star"></i>Kedvenceim</p>
+      </section>
+      <section class="col-lg-4">
+        <h3>Szállítás</h3>
+        <p><i class="bi bi-truck"></i> Visszaküldési szabályzat</p>
+        <p><i class="bi bi-box"></i> Elállás</p>
+        <p><i class="bi bi-box-seam"></i>Csomagbiztosítás</p>
+        <p><i class="bi bi-wallet2"></i>Fizetés</p>
+        <p><i class="bi bi-calendar"></i>Időzített átvétel</p>
 
+
+      </section>
+    </footer>
+
+  </div>
+  <script src="js/custom.js"></script>
+  <script src="js/ybf.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/toast.js"></script>
 </body>
 
 </html>
